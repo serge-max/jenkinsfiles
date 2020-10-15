@@ -4,7 +4,7 @@ properties([disableConcurentBuilds()])
 
 pipeline {
 		agent{
-				label 'master'
+				label 'main'
 				}
 			options {
 				buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
@@ -13,7 +13,7 @@ pipeline {
 	stages {
 			stage("First Test Step") {
 					steps {
-							sh 'ssh root@gitlab-test \'hostname\''
+							sh 'ssh root@gitlab.healbe.com \'hostname\''
 					}
 			}
 	}
