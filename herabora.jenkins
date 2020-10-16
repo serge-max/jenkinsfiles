@@ -1,0 +1,20 @@
+pipeline {
+        agent {
+            label passedConfigurationMap.agent
+        }
+        environment {
+            PROJECT_VERSION = "${passedConfigurationMap.projectVersion}"
+        }
+        tools {
+            //use this to control the build configurations like maven and jdk used under SCV
+            jdk passedConfigurationMap.javaVersionToUse
+        }
+        stages {
+            stage('Validate Parameters') {
+                steps {
+                    script {
+                        echo "Validate"
+                    }
+                }
+            }
+   }
