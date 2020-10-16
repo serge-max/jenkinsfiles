@@ -1,10 +1,4 @@
 pipeline {
-        agent {
-            label passedConfigurationMap.agent
-        }
-        environment {
-            PROJECT_VERSION = "${passedConfigurationMap.projectVersion}"
-        }
         stages {
             stage('Validate Parameters') {
                 steps {
