@@ -1,6 +1,6 @@
 #!Groovy
 //Check gitlab-test properties
-properties([enableConcurentBuilds()])
+//properties([enableConcurentBuilds()])
 
 pipeline {
 		agent{
