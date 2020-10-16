@@ -16,5 +16,10 @@ pipeline {
 							sh 'ssh root@gitlab.healbe.com \'hostname\''
 					}
 			}
+			stage("Second Test Step") {
+					steps {
+							sh 'ssh root@gitlab.healbe.com \'uptime\''
+					}	
+			}
 	}
 }
